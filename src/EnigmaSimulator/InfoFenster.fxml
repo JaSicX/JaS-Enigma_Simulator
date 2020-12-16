@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ Copyright (C) 2017-2020 Jasley Jangk | Github JaSicX
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+
+ This program is licensed under GPL-2.0-or-later
+ 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2,
+ as published by the Free Software Foundation.
+ 
+ This program is distributed WITHOUT ANY WARRANTY!
+ See the GNU General Public License for more details. http://www.gnu.org/licenses/
+-->
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="250.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EnigmaSimulator.InfoFensterController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d3d3" height="129.0" stroke="BLACK" strokeType="INSIDE" width="128.0" />
+      <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/EnigmaSimulator/icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="140.0" layoutY="20.0" text="Enigma Simulator" />
+      <Label layoutX="140.0" layoutY="42.0" text="Version 2.0" />
+      <Label layoutX="140.0" layoutY="86.0" text="Entwickler Jasley Jangk" />
+      <Button fx:id="btnOKclose" layoutX="155.0" layoutY="205.0" mnemonicParsing="false" onAction="#handleBtnOKclose" text="OK" />
+      <Label layoutX="20.0" layoutY="172.0" text="This program is licensed under GPL-2.0-or-later." />
+      <Label layoutX="20.0" layoutY="151.0" text="Copyright (C) 2017-2020 Jasley Jangk" />
+      <Label layoutX="140.0" layoutY="107.0" text="Github " />
+      <Hyperlink fx:id="hplLinkToGithub" layoutX="189.0" layoutY="103.0" onAction="#handleHPLinkToGithub" text="\@JaSicX" />
+   </children>
+</AnchorPane>

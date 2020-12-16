@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ Copyright (C) 2017-2020 Jasley Jangk | Github JaSicX
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+
+ This program is licensed under GPL-2.0-or-later
+ 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2,
+ as published by the Free Software Foundation.
+ 
+ This program is distributed WITHOUT ANY WARRANTY!
+ See the GNU General Public License for more details. http://www.gnu.org/licenses/
+-->
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EnigmaSimulator.EnigmaController">
+   <center>
+      <GridPane prefHeight="501.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="170.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="99.0" minHeight="84.0" prefHeight="99.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="448.0" minHeight="331.0" prefHeight="331.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <Label text="Walzenstellung 4">
+                     <padding>
+                        <Insets bottom="-20.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="jcbWalze4Stellung" prefHeight="31.0" prefWidth="100.0" />
+                  <Label text="Ringstellung 4">
+                     <padding>
+                        <Insets bottom="-20.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="jcbWalze4Ring" prefHeight="31.0" prefWidth="75.0" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <Label text="Walzenstellung 3">
+                     <padding>
+                        <Insets bottom="-20.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="jcbWalze3Stellung" prefHeight="31.0" prefWidth="100.0" />
+                  <Label text="Ringstellung 3">
+                     <padding>
+                        <Insets bottom="-20.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="jcbWalze3Ring" prefHeight="31.0" prefWidth="75.0" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <Label text="Walzenstellung 2">
+                     <padding>
+                        <Insets bottom="-20.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="jcbWalze2Stellung" prefHeight="31.0" prefWidth="100.0" />
+                  <Label text="Ringstellung 2">
+                     <padding>
+                        <Insets bottom="-20.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="jcbWalze2Ring" prefHeight="31.0" prefWidth="75.0" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <Label text="Walzenstellung 1">
+                     <padding>
+                        <Insets bottom="-20.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="jcbWalze1Stellung" prefHeight="31.0" prefWidth="100.0" />
+                  <Label text="Ringstellung 1">
+                     <padding>
+                        <Insets bottom="-20.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="jcbWalze1Ring" prefHeight="31.0" prefWidth="75.0" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.rowIndex="1">
+               <children>
+                  <ToggleButton fx:id="btnM4SwitchM3" mnemonicParsing="false" onAction="#handleBtnSwitch" text="Enigma M4 Ausgewählt" />
+                  <Button fx:id="btnQuickSave" mnemonicParsing="false" onAction="#handleQuickSave" text="Schnellspeichern">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Button>
+                  <Button fx:id="btnQuickLoad" disable="true" mnemonicParsing="false" onAction="#handleQuickLoad" text="Schnellladen">
+                     <VBox.margin>
+                        <Insets top="-5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="btnRand" mnemonicParsing="false" onAction="#handleRandomeEinstellungen" text="Zufällige Einstellungen">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Button>
+                  <Button fx:id="btnReset" mnemonicParsing="false" onAction="#handleBbtnReset" text="Zurücksetzen">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="btnEinstellungenEnigma" mnemonicParsing="false" onAction="#handleEinstellEnigma" style="-fx-background-color: #4283dd;" text="Einstellugen Setzten">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Label text="UKW" />
+                  <ComboBox fx:id="jcbUKW" prefHeight="31.0" prefWidth="135.0" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
+               <children>
+                  <Label text="Walze 4" />
+                  <ComboBox fx:id="jcbWalze4" prefHeight="31.0" prefWidth="135.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="2">
+               <children>
+                  <Label text="Walze 3" />
+                  <ComboBox fx:id="jcbWalze3" prefHeight="31.0" prefWidth="135.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="3">
+               <children>
+                  <Label text="Walze 2" />
+                  <ComboBox fx:id="jcbWalze2" prefHeight="31.0" prefWidth="135.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="4">
+               <children>
+                  <Label text="Walze 1" />
+                  <ComboBox fx:id="jcbWalze1" prefHeight="31.0" prefWidth="135.0" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <VBox prefHeight="330.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="txaAusgabe" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="125.0" prefWidth="1280.0" wrapText="true">
+               <font>
+                  <Font name="Consolas" size="15.0" />
+               </font></TextArea>
+            <TextArea fx:id="txaEingabe" disable="true" editable="false" nodeOrientation="LEFT_TO_RIGHT" onInputMethodTextChanged="#handleEingabeTXA" onKeyPressed="#handleEingabeTXA" onKeyReleased="#handleEingabeTXA" onKeyTyped="#handleEingabeTXA" prefHeight="125.0" prefWidth="1280.0" />
+            <FlowPane prefHeight="0.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtSteck1" onAction="#handlePruefEingabeSteckbrett1" onKeyReleased="#handlePruefEingabeSteckbrett1" prefHeight="31.0" prefWidth="53.0">
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="txtSteck2" onKeyReleased="#handlePruefEingabeSteckbrett2" prefHeight="31.0" prefWidth="53.0">
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="txtSteck3" onKeyReleased="#handlePruefEingabeSteckbrett3" prefHeight="31.0" prefWidth="53.0">
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="txtSteck4" onKeyReleased="#handlePruefEingabeSteckbrett4" prefHeight="31.0" prefWidth="53.0">
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="txtSteck5" onKeyReleased="#handlePruefEingabeSteckbrett5" prefHeight="31.0" prefWidth="53.0">
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="txtSteck6" onKeyReleased="#handlePruefEingabeSteckbrett6" prefHeight="31.0" prefWidth="53.0">
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="txtSteck7" onKeyReleased="#handlePruefEingabeSteckbrett7" prefHeight="31.0" prefWidth="53.0">
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="txtSteck8" onKeyReleased="#handlePruefEingabeSteckbrett8" prefHeight="31.0" prefWidth="53.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtSteck9" onKeyReleased="#handlePruefEingabeSteckbrett9" prefHeight="31.0" prefWidth="53.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtSteck10" onKeyReleased="#handlePruefEingabeSteckbrett10" prefHeight="31.0" prefWidth="53.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtSteck11" onKeyReleased="#handlePruefEingabeSteckbrett11" prefHeight="31.0" prefWidth="53.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtSteck12" onKeyReleased="#handlePruefEingabeSteckbrett12" prefHeight="31.0" prefWidth="53.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtSteck13" onKeyReleased="#handlePruefEingabeSteckbrett13" prefHeight="31.0" prefWidth="53.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="35.0" top="30.0" />
+                     </FlowPane.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </FlowPane>
+         </children></VBox>
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Datei">
+            <items>
+              <MenuItem fx:id="meiLaden" mnemonicParsing="false" onAction="#handleLaden" onMenuValidation="#handleLaden" text="Einstellungen Laden" />
+                  <MenuItem fx:id="meiSpeichern" mnemonicParsing="false" onAction="#handleSpeichern" onMenuValidation="#handleLaden" text="Einstellungen Speichern" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Analyse Monitor">
+            <items>
+              <MenuItem fx:id="meiAnalyseMonitorKlein" mnemonicParsing="false" onAction="#handleEingabemeiAnalysemonitorKlein" onMenuValidation="#handleEingabemeiAnalysemonitorKlein" text="Klein" />
+                  <MenuItem fx:id="meiAnalyseMonitorGroß" mnemonicParsing="false" onAction="#handleEingabeAnalysemonitorGroß" text="Groß" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Optionen">
+               <items>
+                  <MenuItem fx:id="menEinstellungen" mnemonicParsing="false" onAction="#handleEinstellungen" text="Einstellungen" />
+                <MenuItem fx:id="meiKeyManager" mnemonicParsing="false" onAction="#handlemeiEingabeKeyManager" onMenuValidation="#handlemeiEingabeKeyManager" text="Key Manager" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Info">
+            <items>
+              <MenuItem fx:id="meiInfoUeberEnigmaSimulator" mnemonicParsing="false" onAction="#handlemeiInfoUeberEnigmaSimulator" text="Info über Enigma Simulator" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

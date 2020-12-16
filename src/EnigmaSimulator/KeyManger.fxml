@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ Copyright (C) 2017-2020 Jasley Jangk | Github JaSicX
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+
+ This program is licensed under GPL-2.0-or-later
+ 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2,
+ as published by the Free Software Foundation.
+ 
+ This program is distributed WITHOUT ANY WARRANTY!
+ See the GNU General Public License for more details. http://www.gnu.org/licenses/
+-->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="323.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EnigmaSimulator.KeyManagerController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="323.0" prefWidth="500.0" spacing="20.0">
+         <children>
+            <Label text="Eingabe für Key">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEingabeKey" />
+            <HBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="500.0" spacing="100.0">
+               <children>
+                  <Button fx:id="btnEinstellungenSetzen" mnemonicParsing="false" onAction="#handleBtnEinstellungenSetzen" text="Key als Eistellungen Setzen">
+                     <HBox.margin>
+                        <Insets bottom="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <Label text="Generierter Key">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtGenerierterKey" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+               <children>
+                  <Button fx:id="btnKeyGenerieren" mnemonicParsing="false" onAction="#handleBtnKeyGenerieren" text="Key Generieren">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnKopiereKey" mnemonicParsing="false" onAction="#handleBtnKopiereKey" text="Generierten Key Kopieren" />
+                  <Button fx:id="btnSchließen" mnemonicParsing="false" onAction="#handleBtnSchließen" text="Schließen">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

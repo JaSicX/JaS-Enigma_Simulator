@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ Copyright (C) 2017-2020 Jasley Jangk | Github JaSicX
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+
+ This program is licensed under GPL-2.0-or-later
+ 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2,
+ as published by the Free Software Foundation.
+ 
+ This program is distributed WITHOUT ANY WARRANTY!
+ See the GNU General Public License for more details. http://www.gnu.org/licenses/
+-->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" prefHeight="692.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EnigmaSimulator.AnalyseMonitorGrossController">
+   <children>
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Hinweg durch die Walzen">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="180.0" style="-fx-background-color: e6e6e6;">
+               <children>
+                  <Label text="UKW">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="-18.0" />
+                     </padding></Label>
+                  <Label text="⮦">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" top="-180.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="70.0">
+               <children>
+                  <Label text="Übergang">
+                     <VBox.margin>
+                        <Insets bottom="-70.0" top="8.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-21.0" />
+                     </padding>
+                  </Label>
+                  <Label text="⮢">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-8.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtRotor4zuUKW_UebergangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⮤">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" style="-fx-background-color: e6e6e6;">
+               <children>
+                  <Label text="Rotor 4" />
+                  <Label text="⮦">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRotor4EingangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor4InnerHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor4AusgangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⮠">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="35.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="70.0">
+               <children>
+                  <Label text="Übergang">
+                     <VBox.margin>
+                        <Insets bottom="-70.0" top="8.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-21.0" />
+                     </padding>
+                  </Label>
+                  <Label text="⮢">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-8.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtRotor3zu4UebergangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⮤">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" style="-fx-background-color: e6e6e6;">
+               <children>
+                  <Label text="Rotor 3" />
+                  <Label text="⮦">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRotor3EingangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor3InnerHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor3AusgangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⮠">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="35.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="70.0">
+               <children>
+                  <Label text="Übergang">
+                     <padding>
+                        <Insets top="-21.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="-70.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="⮢">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-8.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtRotor2zu3UebergangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⮤">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" style="-fx-background-color: e6e6e6;">
+               <children>
+                  <Label text="Rotor 2" />
+                  <Label text="⮦">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRotor2EingangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor2InnerHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor2AusgangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⮠">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="35.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="70.0">
+               <children>
+                  <Label text="Übergang">
+                     <VBox.margin>
+                        <Insets bottom="-70.0" top="8.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-21.0" />
+                     </padding>
+                  </Label>
+                  <Label text="⮢">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-8.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtRotor1zu2UebergangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⮤">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" style="-fx-background-color: #e6e6e6;">
+               <children>
+                  <Label text="Rotor 1" />
+                  <Label text="⮦">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRotor1EingangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor1InnerHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor1AusgangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⮠">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="35.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="70.0">
+               <children>
+                  <Label text="Übergang">
+                     <VBox.margin>
+                        <Insets bottom="-70.0" top="8.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-21.0" />
+                     </padding>
+                  </Label>
+                  <Label text="⮢">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-8.0" />
+                     </padding>
+                  </Label>
+                  <Label text="EGW">
+                     <VBox.margin>
+                        <Insets bottom="-70.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="-21.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtRotorEGWzu1UebergangHIN" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⮤">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="10.0" style="-fx-background-color: #f0f8ff;">
+               <children>
+                  <Label text="Eingabe">
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="txtEinagbe" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="10.0" prefWidth="63.0" text="Steckbett">
+                     <VBox.margin>
+                        <Insets top="-0.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtSteckbrettEinagbe" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⮠">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="35.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="755.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="30.0" prefWidth="70.0">
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: e6e6e6;">
+                     <children>
+                        <TextField fx:id="txtUKWInner" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="18.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="11.0" stroke="BLACK" strokeType="INSIDE" width="700.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Rectangle>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></HBox>
+      <Label alignment="CENTER_RIGHT" text="Rückweg durch die Walzen">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_RIGHT" prefHeight="236.0" prefWidth="897.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="190.0" style="-fx-background-color: e6e6e6;">
+               <children>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <Label text="⮡">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets top="-27.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="27.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="70.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="31.0" text="⮣" VBox.vgrow="NEVER">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="-20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRotorUKWzu4UebergangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⮥">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" style="-fx-background-color: e6e6e6;">
+               <children>
+                  <Label text="⮧">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor4EingangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor4InnerRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor4AusgangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⮡">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="70.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="31.0" text="⮣" VBox.vgrow="NEVER">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="-20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRotor4zu3UebergangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⮥">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" style="-fx-background-color: e6e6e6;">
+               <children>
+                  <Label text="⮧">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor3EingangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor3InnerRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor3AusgangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="35.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⮡">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="70.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="31.0" text="⮣" VBox.vgrow="NEVER">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="-20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRotor3zu2UebergangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⮥">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" style="-fx-background-color: e6e6e6;">
+               <children>
+                  <Label text="⮧">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor2EingangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor2InnerRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor2AusgangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⮡">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="70.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="31.0" text="⮣" VBox.vgrow="NEVER">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="-20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRotor2zu1UebergangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⮥">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" style="-fx-background-color: e6e6e6;">
+               <children>
+                  <Label text="⮧">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor1EingangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor1InnerRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⭣">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRotor1AusgangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="⮡">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="70.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="31.0" text="⮣" VBox.vgrow="NEVER">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="-20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="EGW">
+                     <padding>
+                        <Insets top="-21.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="-70.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRotor1zuEGW_UebergangRUECK" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="⮥">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="70.0" spacing="10.0" style="-fx-background-color: #f0f8ff;">
+               <children>
+                  <Label text="⮧">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="-130.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Steckbett/">
+                     <VBox.margin>
+                        <Insets bottom="-5.0" />
+                     </VBox.margin></Label>
+                  <Label text="Ausgabe">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtSteckbrettAusgabe" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="37.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
